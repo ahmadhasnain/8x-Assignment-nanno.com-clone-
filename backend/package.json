@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "postinstall": "prisma generate",
+    "render-build": "npm install && npx prisma db push --accept-data-loss"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@prisma/client": "^5.20.0",
     "bcryptjs": "^3.0.3",
