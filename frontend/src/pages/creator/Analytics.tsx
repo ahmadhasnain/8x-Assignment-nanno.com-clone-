@@ -21,7 +21,6 @@ export default function Analytics() {
     { label: "Comments / post", value: formatNumber(profile.commentsPerPost), icon: IconComment },
   ];
 
-  const maxRate = 8;
   const bars = [
     { label: "Reactions", value: profile.reactionsPerPost ?? 0, max: (profile.followers ?? 1) * 0.1 },
     { label: "Impressions", value: profile.impressionsPerPost ?? 0, max: (profile.followers ?? 1) * 5 },
